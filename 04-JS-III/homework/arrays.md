@@ -1,0 +1,1 @@
+Array: Arreglos o matrices son contenedores de datos, a los cuales pordemos acceder llamando la matriz, los datos van en [] , podemos tener toda clase de datos, agregar o quitar datos, hacer operaciones matematicas con ellos, etc.
