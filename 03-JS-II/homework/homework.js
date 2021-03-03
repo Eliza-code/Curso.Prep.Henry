@@ -18,7 +18,7 @@ function mayoriaDeEdad(edad) {
   if (edad >= 18) { 
     return ("Allowed");
   }
-  return("Not allowed");
+  return "Not allowed" ;
 }
   
 function conection(status) {
@@ -90,7 +90,7 @@ function esDiezOCinco(numero) {
 function estaEnRango(numero) {
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
   // De lo contrario, devuelve "false"
-  // Tu código:
+  // Tu código: return numero < 50 && numero > 20 ; 
   if ( numero < 50 && numero > 20){
     return true;
   }return false;
@@ -146,7 +146,7 @@ function esPrimo(numero) {
   // De lo contrario devuelve "falso"
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
-  // Nota: Los números 0 y 1 NO son considerados números primos
+  // Nota: Los números 0 y 1 NO son considerados números primos for var i=3 y no se pone el if de ===2 porue sigue derecho a true 
    if ( numero<2){
      return false;
    }if (numero === 2){
@@ -154,7 +154,7 @@ function esPrimo(numero) {
    }   for (i=2; i<numero ; i++){
      if (numero%i===0){
        return false;
-     }
+     };
    }return true;
 }
 
@@ -166,7 +166,7 @@ if (valor){
   return ("Soy verdadero");
 }else {
   return ("Soy falso");
-}
+};
 }
 
 function tablaDelSeis(){
