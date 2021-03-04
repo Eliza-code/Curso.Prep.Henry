@@ -38,8 +38,8 @@ function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {
   // "objetoMisterioso" tiene una propiedad llamada "numeroMisterioso"
   // Multiplica el numeroMisterioso por 5 y devuelve el producto
   // Tu código:
-var producto= objetoMisterioso.numeroMisterioso * 5 ;
-return producto ; 
+return objetoMisterioso.numeroMisterioso * 5 ;
+
 }
 
 function eliminarPropiedad(objeto, unaPropiedad) {
@@ -59,7 +59,7 @@ function nuevoUsuario(nombre, email, password) {
     nombre : nombre,
     email: email,
     password: password,
-  }
+  };
   return nuevoUsuario;
 
 }
@@ -67,7 +67,7 @@ function nuevoUsuario(nombre, email, password) {
 function tieneEmail(usuario) {
   // Devuelve "true" si el usuario tiene un valor definido para la propiedad "email"
   // De lo contratio, devuelve "false"
-  // Tu código:
+  // Tu código: return !! usuario.email; 
   if (usuario['email']){
     return true;
   }else {
@@ -98,7 +98,7 @@ function verificarPassword(usuario, password) {
 }
 
 function actualizarPassword(usuario, nuevaPassword) {
-  // Reemplaza la contraseña existente en el objeto "usuario" con el valor de "nuevagPassword"
+  // Reemplaza la contraseña existente en el objeto "usuario" con el valor de "nueva Password"
   // Devuelve el objeto
   // Tu código:
   usuario['password']=nuevaPassword ;
@@ -135,21 +135,21 @@ function sumarLikesDeUsuario(usuario) {
   // Tu código:
   var suma=0;
   for (var i=0 ;  i<usuario.posts.length ; i++){
-    suma= suma + usuario.posts[i].likes;
+    suma += usuario.posts[i].likes;
   }
   return suma;
 }
 
 function agregarMetodoCalculoDescuento(producto) {
   // Agregar un método (función) al objeto "producto" llamado "calcularPrecioDescuento"
-  // Este método debe multiplicar el "precio" del "producto" ("producto.precio" o "producto[precio]") y "porcentajeDeDescuento" para obtener el descuento
+  // Este método debe multiplicar el "precio" del "producto" ("producto.precio" o "producto['precio']") y "porcentajeDeDescuento" para obtener el descuento
   // El método resta el descuento del precio y devuelve el precio con descuento
   // Devuelve el objeto "producto" al final de la función
   // Ejemplo:
   // producto.precio -> 20
   // producto.porcentajeDeDescuento -> 0.2 (o simplemente ".2")
   // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
-  // Tu código:
+  // Tu código: en lugar de this se puede poner porducto   
 
   producto.calcularPrecioDescuento = function () {
     return this.precio - (this.precio * this.porcentajeDeDescuento);
